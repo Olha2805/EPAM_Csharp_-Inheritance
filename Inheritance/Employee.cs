@@ -6,40 +6,40 @@ namespace InheritanceTask
     {
         private string name;
         private decimal salary;
-        private decimal bonus;
-        public static decimal total_salary;
+        protected decimal bonus;
+        private static decimal total_salary;
 
-        public string Name
-        {
-            get => name;
-            set { if (name != null) this.name = name; else this.name = "mane"; }
-        }
+        public string Name {
+            get { return name; }
+            private set { if (value != null) name = value; }
+        } 
+
+        public decimal TotalSalary { get { return salary; }
+            set { if (value > 0) salary = value; } }
 
         public decimal Salary
         {
             get { return salary; }
-            set { if (value > 0) this.salary = value; else this.salary = 0; }
+            set { if (value > 0) { salary = value; } else { salary = 0; } }
         }
 
         public Employee(string name, decimal salary)
         {
-            this.name = name;
-            this.salary = salary;
+            Name = name;
+            Salary = salary;
             total_salary += salary;
         }
 
         public virtual void SetBonus(decimal bonus)
         {
-            if (bonus > 0) this.bonus = bonus;
-            else this.bonus = 0;
+            this.bonus = bonus;
         }
 
         public decimal ToPay()
         {
-            decimal totalToPay = salary + bonus;
-            return totalToPay;
+            decimal toPay = salary + bonus;
+            return toPay;
         }
-
     }
-    }
+}
 

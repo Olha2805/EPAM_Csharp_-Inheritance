@@ -6,19 +6,16 @@ namespace InheritanceTask
 {
     public class SalesPerson : Employee
     {
-        private int percent;
+        private readonly int percent;
         public SalesPerson(string name, decimal salary, int percent) : base(name, salary)
         {
                  this.percent = percent;
         }
-        public virtual void SetBonus(decimal bonus, int percent)
+        public override void SetBonus(decimal bonus)
         {
-            if (bonus > 0)
-            {
-                if (percent > 100 && percent <= 200) bonus *= 2;
-                else if (percent > 200) bonus *= 3;
-            }
-            else bonus = 0;
+            if (percent > 100 && percent <= 200) this.bonus = bonus * 2;
+            else if (percent > 200) this.bonus = bonus * 3;
+            else this.bonus = bonus;
         }
 
     }
