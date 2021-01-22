@@ -7,7 +7,7 @@ namespace InheritanceTask
         private string name;
         private decimal salary;
         protected decimal bonus;
-        private static decimal total_salary;
+
 
         public string Name {
             get { return name; }
@@ -27,7 +27,7 @@ namespace InheritanceTask
         {
             Name = name;
             Salary = salary;
-            total_salary += salary;
+
         }
 
         public virtual void SetBonus(decimal bonus)
