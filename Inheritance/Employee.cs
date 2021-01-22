@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace InheritanceTask
 {
@@ -11,7 +11,7 @@ namespace InheritanceTask
 
         public string Name {
             get { return name; }
-            private set { if (value != null) name = value; }
+            set { if (value != null) name = value; }
         } 
 
         public decimal TotalSalary { get { return salary; }
