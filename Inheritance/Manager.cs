@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -11,7 +11,7 @@ namespace InheritanceTask
         {
 
         }
-        public void SetBonus(decimal bonus, int clientAmount)   // public override virtual SetBonus(decimal bonus, int clientAmount)
+        public void SetBonus(decimal bonus, int clientAmount)  
         {
             quantity += clientAmount;
             if (clientAmount > 100 && clientAmount <= 150) bonus += 500;
