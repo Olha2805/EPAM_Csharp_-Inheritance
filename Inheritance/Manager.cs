@@ -4,12 +4,21 @@ using System.Text;
 
 namespace InheritanceTask
 {
-    //TODO: Create public class 'Manager' here, which inherits from 'Employee' class
+    public class Manager : Employee
+    {
+        private int quantity;
+        public Manager(string name, decimal salary, int clientAmount) : base(name, salary)
+        {
 
-    //TODO: Define private integer field: 'quantity'
+        }
+        public void SetBonus(decimal bonus, int clientAmount)   // public override virtual SetBonus(decimal bonus, int clientAmount)
+        {
+            quantity += clientAmount;
+            if (clientAmount > 100 && clientAmount <= 150) bonus += 500;
+            else if (clientAmount > 150) bonus += 1000;
+            else bonus += 0;
+        }
+    }
 
-    //TODO: Define constructor with three parameters: 'name'(string), 'salary'(decimal) and 'clientAmount'(int). Assign two first parameters to base class.
-
-    //TODO: Override public virtual method 'SetBonus', which increases bonus depending on clients amount
 }
 
