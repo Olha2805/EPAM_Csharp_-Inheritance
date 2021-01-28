@@ -36,10 +36,10 @@ namespace InheritanceTask
             decimal maxSalary = employees[0].ToPay();
             for (int i = 0; i < employees.Length; i++)
             {
-                if (employees[i].Salary > maxSalary)
+                if (employees[i].ToPay() > maxSalary)
                 {
                     maxSalary = employees[i].ToPay();
-                    string nameMaxSalary = employees[i].Name;
+                    NameMaxSalary = employees[i].Name;
                 }
             }
             return NameMaxSalary;

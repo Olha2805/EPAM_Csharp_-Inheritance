@@ -237,8 +237,7 @@ namespace Inheritance.Tests
         #endregion
 
         #region advance
-        // UNCOMMENT TO CHECK ADVANCED PART
-        /**
+     
         [Test]
         public void CompanyClassExist()
         {
@@ -371,8 +370,7 @@ namespace Inheritance.Tests
                 }, "name9", "name4", (decimal)117, (decimal)1629);
             }
         }
-        **/
-
+     
         #endregion
 
         #region Utilities
